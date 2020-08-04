@@ -8,7 +8,7 @@
 /bazel-out
 
 # settings
-/.gitignore
+/app-settings.js
 
 # dependencies
 /node_modules
