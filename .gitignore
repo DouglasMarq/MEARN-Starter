@@ -8,7 +8,7 @@
 /bazel-out
 
 # settings
-/app-settings
+app-settings
 
 # dependencies
 /node_modules
