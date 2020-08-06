@@ -10,6 +10,9 @@
 # settings
 app-settings.js
 
+#package lock
+package-lock.json
+
 # dependencies
 /node_modules
 
