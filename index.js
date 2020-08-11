@@ -6,8 +6,7 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-require('./app-settings');
-const settings_database = global.database;
+const config = require('./server/src/config');
 
 // • Creating Express instance. Later we will use this to declare routes
 const app = express();
@@ -15,7 +14,7 @@ const app = express();
 // • Connect to MongoDB database. Please be sure you have started MongoDB
 // services before running application and replace `example-app` with your
 // database's name.
-mongoose.connect(`mongodb+srv://${settings_database.user}:${settings_database.password}@${settings_database.host}/${settings_database.database_name}?retryWrites=true&w=majority`, (err) => {
+mongoose.connect(`mongodb+srv://${config.database.user}:${config.database.password}@${config.database.host}/${config.database.database_name}?retryWrites=true&w=majority`, (err) => {
   if (err) {
     // We want to log if app can not connect to database
     console.log(err)
@@ -37,7 +36,7 @@ mongoose.connect(`mongodb+srv://${settings_database.user}:${settings_database.pa
 
     // • We call use() on the Express application to add the Router to handle path,
     // specifying an URL path on first parameter '/api/example'.
-    app.use('/api/example', require('./server/routes/example-route'))
+    app.use('/api/example', require('./server/src/example-route'))
 
     // • Every other route that starts with `api/` but not declared above will
     // return `not-found` status. Apply your `not-found` format here.
