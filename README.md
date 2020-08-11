@@ -2,7 +2,7 @@
 Ready-to-Code template with globals
 
 ### Server Based on Marcelo Guimarães da Silva api-rest
-+ **[M-Guimaraes api-rest Git](https://github.com/M-Guimaraes/api-rest)**: *Please be sure you followegd him
++ **[M-Guimaraes api-rest Git](https://github.com/M-Guimaraes/api-rest)**: Please be sure you followed him
 
 ### Folder structure
 
