@@ -1,6 +1,5 @@
 
 import 'reflect-metadata';
-import "../config";
 import https, { Server as _Server } from "https";
 
 import express, { Request, Response, NextFunction, Application } from "express";
