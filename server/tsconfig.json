@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "target": "es2017",
+      "module": "commonjs",
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "typeRoots": [
+        "node_modules/@types",
+        "@types"
+      ],
+      "types": [
+        "node",
+        "reflect-metadata"
+      ],
+      "esModuleInterop": true,
+      "inlineSourceMap": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "lib": ["es2017"]
+    },
+    "exclude": [
+      "node_modules",
+      "**/__test__/*"
+    ],
+    "file": [
+      "./module.d.ts"
+    ]
+  }
