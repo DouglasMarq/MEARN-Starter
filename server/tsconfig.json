@@ -13,10 +13,12 @@
         "node",
         "reflect-metadata"
       ],
+      "moduleResolution": "node",
       "esModuleInterop": true,
-      "inlineSourceMap": true,
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true,
+      "sourceMap": true,
+      "noFallthroughCasesInSwitch": true,
       "lib": ["es2017"]
     },
     "exclude": [
