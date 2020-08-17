@@ -9,11 +9,11 @@ export = {
         },
     },
     "server": {
-            "port": process.env.SERVER_PORT || 3000,
-            "host": process.env.SERVER_HOST || "127.0.0.1",
-            "name": process.env.SERVER_NAME || "MEAN-Starter",
+        "port": process.env.SERVER_PORT || 3000,
+        "host": process.env.SERVER_HOST || "127.0.0.1",
+        "name": process.env.SERVER_NAME || "MEAN-Starter",
         "socket": {
-            "port": process.env.SERVER_SOCKET_PORT || 443,
+            "port": process.env.SERVER_SOCKET_PORT || 443
         }
     }
 };

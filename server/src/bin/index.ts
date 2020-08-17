@@ -1,12 +1,12 @@
 
-import config from "../config/index";
+import "../config";
+import config from "config";
 import Server from "../server/index";
-import container from "../bin/container"
+import container from "../bin/container";
 
-(async () => {
-    
+(async () => {    
     let test = container.get<Server>(Server);
-    test.listen(3000);
+    test.listen(config.get("server.port"));
 
 })().catch(err => {
     console.error(err);
