@@ -1,5 +1,4 @@
 
-import "../config";
 import config from "config";
 import Server from "../server/index";
 import container from "../bin/container";
