@@ -39,7 +39,7 @@ export default class Server {
 
     listen(port: number) {
         this.app.set('port', port);
-        this._.listen(port);
+        this.app.listen(port);
         console.log(`HTTP server running at port ${port}`);
     }
 }

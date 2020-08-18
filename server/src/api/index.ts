@@ -1,14 +1,18 @@
 'use strict'
-import express, { Application, Router as newRouter } from 'express';
-import bodyParser from 'body-parser';
+import { Application, Router as newRouter } from 'express';
 import { injectable } from 'inversify';
 
 @injectable()
-export default class Router {  
+export default class Router {    
   loadRouters(app: Application) {
-    app.get(`/api`, (req, res) => { 
+    let router = newRouter();
+    
+    router.get(`/exampleRoute`, (req, res) => { 
       res.json({ statusCode: 200, message: 'MEAN-Starter project is OK!' });
     });
+
+    app.use('/api', router);
+    return router;
   }
 }
   // express,
