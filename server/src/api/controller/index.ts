@@ -6,7 +6,6 @@ import { Request, Response } from "express";
 @injectable()
 export default class Controller {
     constructor() {
-
     }
     find(req: Request, res: Response) {
         return res.status(200).json({ statusCode: 200, message: 'MEAN-Starter project is OK!' });
