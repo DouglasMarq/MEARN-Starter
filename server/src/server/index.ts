@@ -21,7 +21,7 @@ export default class Server {
 
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({"extended": true}));
-        // app.use(cors());
+        app.use(cors());
 
         let routers = container.getContainer().get(Router);
         routers.loadRouters(app);
