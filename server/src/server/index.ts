@@ -23,8 +23,7 @@ export default class Server {
         app.use(bodyParser.urlencoded({"extended": true}));
         app.use(cors());
 
-        let routers = container.getContainer().get(Router);
-        routers.loadRouters(app);
+        container.getContainer().get(Router).loadRouters(app);
 
         app.use((req: Request, res: Response, next: NextFunction) => {
             return res.status(404).json({"err": "not found 404"});
