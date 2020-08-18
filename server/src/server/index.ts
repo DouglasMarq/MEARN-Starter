@@ -15,7 +15,7 @@ export default class Server {
     readonly app: Application;
 
     constructor(
-        @inject("routers") routes: Router[]
+        @inject("routers") routers: Router[]
     ) {
         // let routers = container.get<Router>(Router);
         let app = this.app = express();

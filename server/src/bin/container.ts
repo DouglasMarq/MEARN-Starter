@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { Container } from "inversify";
-import Server from '../server/index';
-import Router from '../api/index'
+import Server from '../server';
+import Router from '../api'
 import exampleRoute from '../api/routes/exampleRouter'
 
 const container = new Container();
