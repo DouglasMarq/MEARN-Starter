@@ -4,25 +4,11 @@ import bodyParser from 'body-parser';
 import { injectable } from 'inversify';
 
 @injectable()
-export default abstract class Router {
-  abstract load(app: Application): any;
-}
-
-@injectable()
-export abstract class IntegrableRestRouter extends Router {
-  constructor (
-  ) {
-    super();
-  }
-  load(app: Application) {
-    let router = newRouter();
-
-    router.post(`/`, (req, res) => { 
+export default class Router {  
+  loadRouters(app: Application) {
+    app.get(`/api`, (req, res) => { 
       res.json({ statusCode: 200, message: 'MEAN-Starter project is OK!' });
     });
-
-
-    return router;
   }
 }
   // express,

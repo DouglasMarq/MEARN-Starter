@@ -1,5 +1,4 @@
 // 'use strict'
-// import 'reflect-metadata';
 // import { injectable } from "inversify";
 // import express from 'express';
 // import config from 'config';

@@ -1,5 +1,4 @@
 'use strict'
-import 'reflect-metadata';
 import { injectable } from "inversify";
 import express,{ Router as newRouter, Application } from 'express';
 import config from 'config';
