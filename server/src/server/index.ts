@@ -1,16 +1,13 @@
 
 import 'reflect-metadata';
-import https, { Server as _Server } from "https";
-
+import http, { Server as _Server } from "https";
 import express, { Request, Response, NextFunction, Application } from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-
-import { injectable } from "inversify";
-
-// import Router from "./router";
+import { injectable, inject } from "inversify";
+import Router from "../api";
+import container from "../bin/container";
 // import Controller from "./controller";
-
 @injectable()
 export default class Server {
 
@@ -18,7 +15,9 @@ export default class Server {
     readonly app: Application;
 
     constructor(
+        @inject("routers") routes: Router[]
     ) {
+        // let routers = container.get<Router>(Router);
         let app = this.app = express();
         app.enable('trust proxy');
         app.use(bodyParser.json());
@@ -26,6 +25,8 @@ export default class Server {
         app.use(cors());
 
         app.enabled('trust proxy');
+
+        for(let router of routers) router.load(app);
 
         app.use((req: Request, res: Response, next: NextFunction) => {
             return res.status(404).json({"err": "not found 404"});
@@ -35,7 +36,7 @@ export default class Server {
             return res.status(500).json({"err": "server error 500"});
         });
 
-        this._ = https.createServer({}, app);
+        this._ = http.createServer(app);
 
     }
 
@@ -44,5 +45,4 @@ export default class Server {
         this._.listen(port);
         console.log(`HTTPS server running at port ${port}`);
     }
-
 }
