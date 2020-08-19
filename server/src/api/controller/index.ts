@@ -1,11 +1,9 @@
 'use strict'
-
 import { injectable, inject } from "inversify";
 import { Request, Response } from "express";
 import Mongo from "../../database";
 import Schema from "../../api/schemas";
 import UserSchema from "../model/db/userSchema";
-import { triggerAsyncId } from "async_hooks";
 
 let schemaValidator: Schema;
 let User: any;

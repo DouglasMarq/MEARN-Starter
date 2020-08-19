@@ -6,7 +6,6 @@ import cors from "cors";
 import { injectable, inject } from "inversify";
 import Router from "../api";
 import container from "../bin/container";
-// import Controller from "./controller";
 
 @injectable()
 export default class Server {
@@ -15,7 +14,6 @@ export default class Server {
     readonly app: Application;
 
     constructor(
-        // @inject('routers') routers: Router[]
     ) {
         let app = this.app = express();
 
