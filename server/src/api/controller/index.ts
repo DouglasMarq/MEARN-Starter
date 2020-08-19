@@ -4,21 +4,26 @@ import { Request, Response } from "express";
 import Mongo from "../../database";
 import Schema from "../../api/schemas";
 import UserSchema from "../model/db/userSchema";
+import BaseController from "./base";
+import Service from "../../service";
 
 let schemaValidator: Schema;
 let User: any;
 
 @injectable()
-export default class Controller {
+export default class Controller extends BaseController<UserSchema> {
     constructor(
         @inject(Schema) schema: Schema,
-        @inject(Mongo) mongo: Mongo
+        @inject(Mongo) mongo: Mongo,
     ) {
+        super(UserSchema);
         schemaValidator = schema;
         User = new UserSchema().getSchema();
     }
 
     async find(req: Request, res: Response) {  
+        this.res = this.schema.validateFindSchema(obj);
+
         let result = schemaValidator.validateFindSchema(req.body.username);
         if(result.error) {
             return res.status(400).json({"Error": result.error.details[0].message});

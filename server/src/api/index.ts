@@ -5,7 +5,7 @@ import Controller from './controller';
 import container from '../bin/container';
 
 @injectable()
-export default class Router {    
+export default class Router {
   loadRouters(app: Application) {
     let router = newRouter();
     let controller = container.getContainer().get<Controller>(Controller);
