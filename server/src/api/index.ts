@@ -1,19 +1,22 @@
-'use strict'
 import { Application, Router as newRouter } from 'express';
 import { injectable } from 'inversify';
 import Controller from './controller';
-import container from '../bin/container';
+import UserController from './controller/user/userController';
 
 @injectable()
 export default class Router {
+  private readonly controller: Controller;
+  
+  constructor() {
+    this.controller = new Controller();
+  }
   loadRouters(app: Application) {
     let router = newRouter();
-    let controller = container.getContainer().get<Controller>(Controller);
     
-    router.get(`/findRoute`, controller.find);
-    router.post(`/createRoute`, controller.create);
-    router.delete(`/deleteRoute`, controller.delete);
-    router.patch(`/updateRoute`, controller.update);
+    router.get(`/findRoute`, this.controller.find);
+    // router.post(`/createRoute`, this.controller.create);
+    // router.delete(`/deleteRoute`, this.controller.delete);
+    // router.patch(`/updateRoute`, this.controller.update);
 
     app.use('/api', router);
     return router;

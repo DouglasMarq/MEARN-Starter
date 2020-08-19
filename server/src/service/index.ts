@@ -11,12 +11,10 @@ export default class Service<T> {
     // this.schema = container.getContainer().get<Schemas<T>>(Schemas);
     // this.type = type.name;
     switch(type.name) {
-      case 'UserSchema':
+      case 'userModel':
         this.type = 'user';
+        this.res = null;
         break;
-        // case 'xptomodel':
-        //   return 'xpto'
-        //break;
       default:
         this.type = type.name;
         this.res = null;

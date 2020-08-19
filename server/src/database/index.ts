@@ -1,5 +1,3 @@
-'use strict'
-
 import { injectable } from "inversify";
 import { connection, connect, disconnect } from 'mongoose';
 import config from "config";

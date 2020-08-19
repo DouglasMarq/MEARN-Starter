@@ -1,4 +1,3 @@
-'use strict'
 import 'reflect-metadata';
 import findSchema from './findSchema';
 import createSchema from './createSchema';
@@ -11,7 +10,21 @@ const update = new updateSchema;
 const remove = new deleteSchema;
 
 export default class Schemas<T> {
-  
+//     private readonly type: string;
+//   constructor(type: new() => T) {
+//     switch(type.name) {
+//         case 'UserSchema':
+//           this.type = 'user';
+//           break;
+//           // case 'xptomodel':
+//           //   return 'xpto'
+//           //break;
+//         default:
+//           this.type = type.name;
+//           break;
+//       }
+//   }
+
     validateCreateSchema(object: any) {
         return create.validateSchema().validate(object);
     }
