@@ -12,23 +12,23 @@ export default class Server {
     readonly _: _Server;
     readonly app: Application;
 
-    constructor(@inject(Router) router: Router
-    ) {
+    constructor(@inject(Router) router: Router) {
         let app = this.app = express();
 
         app.use(bodyParser.json());
-        app.use(bodyParser.urlencoded({"extended": true}));
+        app.use(bodyParser.urlencoded({ "extended": true }));
         app.use(cors());
 
-        router.loadRouters(app);
+        app.use(router.loadRouters(app));
 
         app.use((req: Request, res: Response, next: NextFunction) => {
-            return res.status(404).json({"err": "not found 404"});
+            return res.status(404).json({ "err": "not found 404" });
         });
 
         app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-            return res.status(500).json({"err": "server error 500"});
+            return res.status(500).json({ "err": "server error 500" });
         });
+
 
         this._ = http.createServer(app);
     }

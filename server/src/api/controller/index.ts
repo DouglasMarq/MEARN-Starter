@@ -5,14 +5,15 @@ import UserController from "./user/userController";
 @injectable()
 export default class Controller {
     private userController: UserController;
+
     constructor() {
         this.userController = new UserController();
     }
 
     async find(req: Request, res: Response) {
-        switch(req.body.type) {
+        switch (req.body.type) {
             case 'user':
-                return this.userController.findUser(req.body, res);
+                return await this.userController.findUser(req.body, res);
             default:
                 break;
         }

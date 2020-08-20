@@ -12,7 +12,6 @@ export class bindContainers {
         container.bind<Server>(Server).to(Server).inSingletonScope();
         container.bind<Router>(Router).to(Router).inSingletonScope();
         container.bind<Mongo>(Mongo).to(Mongo).inSingletonScope();
-        container.bind<UserController>(UserController).to(UserController).inSingletonScope();
     }
 
     getContainer() {

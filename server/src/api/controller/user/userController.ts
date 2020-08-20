@@ -7,7 +7,6 @@ import BaseController from ".././base";
 let schemaValidator: Schema<UserSchema>;
 let User: any;
 
-@injectable()
 export default class UserController extends BaseController<UserSchema> {
     constructor() {
         super(UserSchema);
@@ -15,14 +14,15 @@ export default class UserController extends BaseController<UserSchema> {
     }
 
     public async findUser(req: Request, res: Response) {  
+        console.log(req);
         try {
-            super.getEntity(req.body);
+            await this.getEntity(req.body);
         } catch (e) {
             return res.status(404).json({'message': e.message, 'stack': e.stack});
         }
         // this.res = this.schema.validateFindSchema(obj);
 
-        // let result = schemaValidator.validateFindSchema(req.body.username);
+        // let result = schemaValidator.validat(eFindSchema(req.body.username);
         // if(result.error) {
         //     return res.status(400).json({"Error": result.error.details[0].message});
         // }
