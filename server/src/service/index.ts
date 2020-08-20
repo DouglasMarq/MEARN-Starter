@@ -7,10 +7,11 @@ export default class Service<T> {
   private readonly type: string;
   private res: any;
 
-  constructor(type: new() => T) {
+  constructor(type: new () => T) {
     // this.schema = container.getContainer().get<Schemas<T>>(Schemas);
     // this.type = type.name;
-    switch(type.name) {
+    console.log('type in service', type, type.name);
+    switch (type.name) {
       case 'userModel':
         this.type = 'user';
         this.res = null;
@@ -23,9 +24,11 @@ export default class Service<T> {
   }
 
   public async getBaseEntity(obj: any) {
-    if(this.res) {
-      return { "error" : this.res.error?.details[0].message };
-    }
-    return model(this.type, new Schema(obj))
+    return new Promise<any>((resolve, reject) => {
+      if (this.res) {
+        reject({ error: this.res.error?.details[0].message });
+      }
+      resolve(model(this.type, new Schema(obj)));
+    });
   }
 }
