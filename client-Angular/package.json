@@ -1,7 +1,7 @@
 {
-  "name": "mean-template",
-  "version": "2.0.0",
-  "description": "A MEAN Stack (Mongo, Express, Angular, Node) simple application template",
+  "name": "me-ar-nstarter",
+  "version": "1.0.0",
+  "description": "A ME(A/R)N Stack (Mongo, Express, Angular or React, Node) simple application template",
   "main": "index.js",
   "scripts": {
     "start": "ng build && node index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agonxgashi/MEAN-template.git"
+    "url": "git+https://github.com/DouglasMarq/MEAN-Starter"
   },
   "keywords": [
     "mean",
@@ -20,12 +20,12 @@
     "simple",
     "github"
   ],
-  "author": "Agon <agonxgashi@gmail.com>",
+  "author": "Douglas Marques <douglas.marq.alves@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/agonxgashi/MEAN-template/issues"
+    "url": "https://github.com/DouglasMarq/MEAN-Starter/issues"
   },
-  "homepage": "https://github.com/agonxgashi/MEAN-template#readme",
+  "homepage": "https://github.com/DouglasMarq/MEAN-Starter#readme",
   "dependencies": {
     "@angular/animations": "^10.0.10",
     "@angular/common": "^10.0.10",
