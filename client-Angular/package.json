@@ -25,7 +25,6 @@
   "bugs": {
     "url": "https://github.com/DouglasMarq/MEAN-Starter/issues"
   },
-  "homepage": "https://github.com/DouglasMarq/MEAN-Starter#readme",
   "dependencies": {
     "@angular/animations": "^10.0.10",
     "@angular/common": "^10.0.10",

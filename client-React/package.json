@@ -24,7 +24,6 @@
   "bugs": {
     "url": "https://github.com/DouglasMarq/MEAN-Starter/issues"
   },
-  "homepage": "https://github.com/DouglasMarq/MEAN-Starter#readme",
   "dependencies": {
     "history": "^4.6.3",
     "marked": "^1.1.1",
