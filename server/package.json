@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "npm run build && node ./dist/index.js",
+    "start": "npm run build && node ./dist/bin/index.js",
     "clean": "rm -Rf ./dist",
     "build": "npm run clean && tsc && cp ./src/.env ./dist/.env",
     "build2": "npm run clean && tsc && cp ./src/.env ./dist/.env && cp -R ./src/storage ./dist",
