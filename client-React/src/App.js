@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { simpleAction } from './actions/simpleActions';
+import { simpleAction } from './actions/simpleState';
 
-const mapStateToProps = state => ({
-  ...state
-})
+// const mapStateToProps = state => ({
+//   ...state
+// })
 
-const mapDispatchToProps = dispatch => ({
-  simpleAction: () => dispatch(simpleAction())
-})
-
-
+// const mapDispatchToProps = dispatch => ({
+//   simpleAction: () => dispatch(simpleAction())
+// })
 
 class App extends Component {
-  simpleAction = (event) => {
-    this.props.simpleAction();
-   }
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 1
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log("nextProps: ", nextProps);
+  }
+
+  simpleAction = () => {
+    this.props.simpleAction(this.state.count);    
+  }
  render() {
   return (
    <div className="App">
@@ -36,4 +45,11 @@ class App extends Component {
   );
  }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(({
+  simpleState
+}) => ({
+  "simple": simpleState
+}), {
+  simpleAction
+})(App);
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
