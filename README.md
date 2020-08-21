@@ -1,5 +1,5 @@
 # MEARN-Starter
-Ready-to-Code template
+Ready-to-Code template with Angular 10 OR React 16
 
 ### Server Based on Marcelo Guimarães da Silva api-rest
 + **[M-Guimaraes Api-Rest Repo](https://github.com/M-Guimaraes/api-rest)**: Please be sure you have followed him and starred his repo
