@@ -1,5 +1,5 @@
-# MEAN-Starter
-Ready-to-Code template with globals
+# MEARN-Starter
+Ready-to-Code template
 
 ### Server Based on Marcelo Guimarães da Silva api-rest
 + **[M-Guimaraes Api-Rest Repo](https://github.com/M-Guimaraes/api-rest)**: Please be sure you have followed him and starred his repo
