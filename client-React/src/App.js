@@ -1,58 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { simpleAction } from './actions/simpleActions';
 
-function App() {
+const mapStateToProps = state => ({
+  ...state
+})
+
+const mapDispatchToProps = dispatch => ({
+  simpleAction: () => dispatch(simpleAction())
+})
+
+
+
+class App extends Component {
+  simpleAction = (event) => {
+    this.props.simpleAction();
+   }
+ render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+   <div className="App">
+    <header className="App-header">
+     {/* <img src={logo} className="App-logo" alt="logo" /> */}
+     <h1 className="App-title">Welcome to React</h1>
+    </header>
+    <p className="App-intro">
+     To get started, edit <code>src/App.js</code> and save to reload
+    </p>
+    <button onClick={this.simpleAction}>Test redux action</button>
+    <pre>
+ {
+  JSON.stringify(this.props)
+ }
+</pre>
+   </div>
   );
+ }
 }
-
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
