@@ -7,9 +7,9 @@ const storeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export const history = createBrowserHistory();
 
-export default function configureStore() {
- return createStore(
+const Store = createStore(
     createRootReducer(history),
     storeEnhancers(applyMiddleware(thunk))
  );
-}
+
+ export {Store}

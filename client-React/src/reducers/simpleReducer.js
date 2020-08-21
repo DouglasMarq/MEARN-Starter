@@ -6,10 +6,10 @@ const initialState = {
 
 export default (state = initialState, action) => {
   console.log('action:', action);
-    switch (action.type) {
+  switch (action.type) {
      case SIMPLE_ACTION:
       return {...state, count: action.payload + state.count };
      default:
       return state
     }
-   }
+  }

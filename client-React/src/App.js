@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { simpleAction } from './actions/simpleState';
+import { Switch, Router, Route } from 'react-router-dom';
+import { history } from "./store";
+import Home from './components/Home/'
 
 // const mapStateToProps = state => ({
 //   ...state
@@ -23,25 +26,17 @@ class App extends Component {
   }
 
   simpleAction = () => {
-    this.props.simpleAction(this.state.count);    
+    // this.props.simpleAction(this.state.count);    
+    this.props.history.push('/test');
   }
  render() {
   return (
-   <div className="App">
-    <header className="App-header">
-     {/* <img src={logo} className="App-logo" alt="logo" /> */}
-     <h1 className="App-title">Welcome to React</h1>
-    </header>
-    <p className="App-intro">
-     To get started, edit <code>src/App.js</code> and save to reload
-    </p>
-    <button onClick={this.simpleAction}>Test redux action</button>
-    <pre>
- {
-  JSON.stringify(this.props)
- }
-</pre>
-   </div>
+    <Router history={history}>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/test" component={Home} />
+      </Switch>
+    </Router>
   );
  }
 }
@@ -52,4 +47,3 @@ export default connect(({
 }), {
   simpleAction
 })(App);
-// export default connect(mapStateToProps, mapDispatchToProps)(App);
