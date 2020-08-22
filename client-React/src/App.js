@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { simpleAction } from './actions/simpleState';
-import { Switch, Router, Route } from 'react-router-dom';
+import { Switch, Router, Route, BrowserRouter } from 'react-router-dom';
 import { history } from "./store";
 import Home from './components/Home/'
-
-// const mapStateToProps = state => ({
-//   ...state
-// })
-
-// const mapDispatchToProps = dispatch => ({
-//   simpleAction: () => dispatch(simpleAction())
-// })
+import Login from './components/Login/'
 
 class App extends Component {
   constructor(props) {
@@ -25,18 +18,14 @@ class App extends Component {
     console.log("nextProps: ", nextProps);
   }
 
-  simpleAction = () => {
-    // this.props.simpleAction(this.state.count);    
-    this.props.history.push('/test');
-  }
  render() {
   return (
-    <Router history={history}>
+    <BrowserRouter history={history}>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/test" component={Home} />
+        <Route path="/test" component={Login} />
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
  }
 }
