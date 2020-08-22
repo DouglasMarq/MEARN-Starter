@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { simpleAction } from '../../actions/simpleState';
+import { Button, Icon, Label } from 'semantic-ui-react';
 
 class Home extends Component {
   constructor(props) {
@@ -15,8 +16,8 @@ class Home extends Component {
   }
 
   simpleAction = () => {
-    // this.props.simpleAction(this.state.count);    
-    this.props.history.push('/test'); 
+    this.props.simpleAction(this.state.count);    
+    // this.props.history.push('/test'); 
   }
     
     render() {
@@ -29,12 +30,16 @@ class Home extends Component {
           <p className="App-intro">
            To get started, edit <code>src/App.js</code> and save to reload
           </p>
-          <button onClick={this.simpleAction}>Test redux action</button>
-          <pre>
-       {
-        JSON.stringify(this.props.simple)
-       }
-      </pre>
+          {/* <Button onClick={this.simpleAction}>Test redux action</Button> */}
+          <Button onClick={this.simpleAction} as='div' labelPosition='right'>
+            <Button icon>
+              <Icon name='heart' />
+                Like
+            </Button>
+          <Label as='a' basic pointing='left'>
+            {this.props.simple.count}
+          </Label>
+          </Button>
          </div>
         );
     }

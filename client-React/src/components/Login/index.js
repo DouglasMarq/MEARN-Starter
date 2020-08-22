@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { simpleAction } from '../../actions/simpleState';
+import { Button } from 'semantic-ui-react';
 
 class Login extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class Login extends Component {
           <p className="App-intro">
            To get started, edit <code>src/App.js</code> and save to reload
           </p>
-          <button onClick={this.simpleAction}>Test redux action</button>
+          <Button onClick={this.simpleAction}>Test redux action</Button>
           <pre>
        {
         JSON.stringify(this.props.simple)

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { simpleAction } from './actions/simpleState';
-import { Switch, Router, Route, BrowserRouter } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { history } from "./store";
-import Home from './components/Home/'
-import Login from './components/Login/'
+import Home from './components/Home/';
+import Login from './components/Login/';
+
 
 class App extends Component {
   constructor(props) {
