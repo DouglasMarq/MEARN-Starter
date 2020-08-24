@@ -15,9 +15,9 @@ class Home extends Component {
     console.log("nextProps: ", nextProps);
   }
 
-  simpleAction = () => {
-    this.props.simpleAction(this.state.count);    
-    // this.props.history.push('/test'); 
+  loginPage = () => {
+    // this.props.simpleAction(this.state.count);    
+    this.props.history.push('/login'); 
   }
     
     render() {
@@ -31,7 +31,7 @@ class Home extends Component {
            To get started, edit <code>src/App.js</code> and save to reload
           </p>
           {/* <Button onClick={this.simpleAction}>Test redux action</Button> */}
-          <Button onClick={this.simpleAction} as='div' labelPosition='right'>
+          <Button onClick={this.loginPage} as='div' labelPosition='right'>
             <Button icon>
               <Icon name='heart' />
                 Like

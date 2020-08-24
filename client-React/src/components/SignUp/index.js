@@ -12,9 +12,9 @@ class Login extends Component {
     console.log("nextProps: ", nextProps);
   }
 
-  signUpPage = () => {
+  loginPage = () => {
     // this.props.simpleAction(this.state.count);
-    this.props.history.push('/signup');
+    this.props.history.push('/login');
   }
     
     render() {
@@ -40,9 +40,8 @@ class Login extends Component {
           </Button>
         </Segment>
       </Form>
-
       <Message>
-        New to us?  <Button basic onClick={this.signUpPage}>Sign Up</Button>
+        New to us? <a href='#'>Sign Up</a>
       </Message>
     </Grid.Column>
   </Grid>

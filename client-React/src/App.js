@@ -5,6 +5,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { history } from "./store";
 import Home from './components/Home/';
 import Login from './components/Login/';
+import SignUp from './components/SignUp';
 
 
 class App extends Component {
@@ -24,7 +25,8 @@ class App extends Component {
     <BrowserRouter history={history}>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/test" component={Login} />
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={SignUp} />
       </Switch>
     </BrowserRouter>
   );
