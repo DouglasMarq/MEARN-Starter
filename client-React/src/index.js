@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { Store } from './store';
 import App from './App';
-import 'semantic-ui-css/semantic.min.css';
+import 'fontsource-roboto';
 
 ReactDOM.render(
  <Provider store={Store}>
