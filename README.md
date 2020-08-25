@@ -18,18 +18,18 @@ Ready-to-Code template with Angular 10 OR React 16
 + **server/src/bin/index.ts**: *File that is used to start the node server*
 
 
-### Prerequisites
+## Prerequisites
 
 + **[Node.js & npm](https://nodejs.org/en/download/)**: *Please be sure you have installed Node.js and npm module on your computer before running the application*
 + **[MongoDB](https://www.mongodb.com/download-center)**: *Download & Install MongoDB, and make sure it's running on the default port (27017).*
 + **[AngularCLI](https://cli.angular.io/)**: *Is used to build front-end Angular application.*
-#### or
+### or
 + **[React](https://reactjs.org/)**: *Is used to build front-end React application.*
 + **[Typescript](https://www.typescriptlang.org/)**: *Is used to build back-end React application.*
 
 
 
-### Usage
+## Usage
 
 + Download this project on your computer
 + Be sure you have started MongoDB service before running the application
