@@ -4,17 +4,17 @@ Ready-to-Code template with Angular 10 OR React 16
 ### Back-end Based on Marcelo Guimarães da Silva api-rest-JS
 + **[M-Guimaraes Api-Rest Repo](https://github.com/M-Guimaraes/api-rest)**: Please be sure you have followed him and starred his repo
 
-### Folder structure
+## Folder structure
 
-## Angular 10
+### Angular 10
 + **client-angular/src**: *Angular app created using ```angular/cli```.*
 + **client-angular/index.js**: *File that is used to start the node server*
 
-## React.js
+### React.js
 + **client-react/src**: *Angular app created using ```angular/cli```.*
 + **client-angular/src/index.js**: *File that is used to start the node server*
 
-## Typescript Back-end
+### Typescript Back-end
 + **server/src/bin/index.ts**: *File that is used to start the node server*
 
 
@@ -23,7 +23,7 @@ Ready-to-Code template with Angular 10 OR React 16
 + **[Node.js & npm](https://nodejs.org/en/download/)**: *Please be sure you have installed Node.js and npm module on your computer before running the application*
 + **[MongoDB](https://www.mongodb.com/download-center)**: *Download & Install MongoDB, and make sure it's running on the default port (27017).*
 + **[AngularCLI](https://cli.angular.io/)**: *Is used to build front-end Angular application.*
-##### or
+#### or
 + **[React](https://reactjs.org/)**: *Is used to build front-end React application.*
 + **[Typescript](https://www.typescriptlang.org/)**: *Is used to build back-end React application.*
 
