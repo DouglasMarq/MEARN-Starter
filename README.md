@@ -11,7 +11,7 @@ Ready-to-Code template with Angular 10 OR React 16
 + **client-angular/index.js**: *File that is used to start the node server*
 
 ### React.js
-+ **client-react/src**: *Angular app created using ```angular/cli```.*
++ **client-react/src**: *React app created using ```npx create-react-app```.*
 + **client-react/src/index.js**: *File that is used to start the node server*
 
 ### Typescript Back-end
