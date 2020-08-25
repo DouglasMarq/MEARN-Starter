@@ -2,6 +2,26 @@
   "name": "client-react",
   "version": "1.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DouglasMarq/MEARN-Starter"
+  },
+  "keywords": [
+    "mean",
+    "mern",
+    "mearn",
+    "template",
+    "angular",
+    "node",
+    "express",
+    "simple",
+    "github"
+  ],
+  "author": "Douglas Marques <douglas.marq.alves@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DouglasMarq/MEARN-Starter/issues"
+  },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",

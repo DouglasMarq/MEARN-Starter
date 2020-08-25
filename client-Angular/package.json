@@ -9,10 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DouglasMarq/MEAN-Starter"
+    "url": "git+https://github.com/DouglasMarq/MEARN-Starter"
   },
   "keywords": [
     "mean",
+    "mern",
+    "mearn",
     "template",
     "angular",
     "node",
@@ -23,7 +25,7 @@
   "author": "Douglas Marques <douglas.marq.alves@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DouglasMarq/MEAN-Starter/issues"
+    "url": "https://github.com/DouglasMarq/MEARN-Starter/issues"
   },
   "dependencies": {
     "@angular/animations": "^10.0.10",

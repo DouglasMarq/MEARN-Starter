@@ -16,23 +16,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DouglasMarq/MEAN-Starter"
+    "url": "git+https://github.com/DouglasMarq/MEARN-Starter"
   },
   "keywords": [
     "mean",
+    "mern",
+    "mearn",
     "template",
-    "angular",
     "node",
     "express",
     "simple",
-    "github"
+    "github",
+    "typescript"
   ],
   "author": "Douglas Marques <douglas.marq.alves@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DouglasMarq/MEAN-Starter/issues"
+    "url": "https://github.com/DouglasMarq/MEARN-Starter/issues"
   },
-  "homepage": "https://github.com/DouglasMarq/MEAN-Starter#readme",
   "devDependencies": {
     "@types/node": "^14.6.0",
     "typescript": "^4.0.2"
