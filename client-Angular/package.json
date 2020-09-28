@@ -6,10 +6,6 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build",
-    "dev:ssr": "ng run angular-starter:serve-ssr",
-    "serve:ssr": "node dist/server/main.js",
-    "build:ssr": "ng build --prod && ng run angular-starter:server:production",
-    "prerender": "ng run angular-starter:prerender",
     "start": "ng build && ng serve --port 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
