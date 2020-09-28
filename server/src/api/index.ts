@@ -1,8 +1,6 @@
-import { Application, Router as newRouter } from 'express';
-import { injectable } from 'inversify';
-import Controller from './controller';
-import UserController from './controller/user/userController';
-import { Request, Response } from "express";
+import { Application, Router as newRouter } from "express";
+import {  injectable } from "inversify";
+import Controller from "./controller";
 
 @injectable()
 export default class Router {
@@ -25,8 +23,7 @@ export default class Router {
       router.get(`/findRoute`, async (req, res) => {
         return this.controller.find(req, res);
       });
-    }
-    catch (err) {
+    } catch (err) {
       throw err;
     }
     try {
@@ -44,7 +41,7 @@ export default class Router {
       throw err;
     }
 
-    app.use('/api', router);
+    app.use("/api", router);
     return router;
   }
 }

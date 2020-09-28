@@ -1,10 +1,10 @@
 {
-  "name": "me-ar-nstarter",
+  "name": "api-rest-ts",
   "version": "1.0.0",
-  "description": "A ME(A/R)N Stack (Mongo, Express, Angular or React, Node) simple application template",
-  "main": "dist/bin/index.js",
+  "description": "A TypeScript simple application template",
+  "main": "bin/index.ts",
   "scripts": {
-    "start": "npm run build && node ./dist/bin/index.js",
+    "start": "npm run build && node ./dist/index.js",
     "clean": "rm -Rf ./dist",
     "build": "npm run clean && tsc && cp ./src/.env ./dist/.env",
     "build2": "npm run clean && tsc && cp ./src/.env ./dist/.env && cp -R ./src/storage ./dist",
@@ -16,12 +16,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DouglasMarq/MEARN-Starter"
+    "url": "git+https://github.com/DouglasMarq/api-rest-TS/"
   },
   "keywords": [
-    "mean",
-    "mern",
-    "mearn",
     "template",
     "node",
     "express",
@@ -32,10 +29,13 @@
   "author": "Douglas Marques Alves <douglas.marq.alves@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DouglasMarq/MEARN-Starter/issues"
+    "url": "https://github.com/DouglasMarq/api-rest-TS/issues"
   },
   "devDependencies": {
-    "@types/node": "^14.6.0",
+    "@types/node": "^14.11.1",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
     "@types/body-parser": "^1.19.0",
     "@types/config": "0.0.36",
     "@types/cors": "^2.8.7",
@@ -47,9 +47,7 @@
     "@types/lodash": "^4.14.159",
     "@types/mongoose": "^5.7.36",
     "@types/reflect-metadata": "^0.1.0",
-    "typescript": "^4.0.2"
-  },
-  "dependencies": {
+    "@types/winston": "^2.4.4",
     "body-parser": "^1.19.0",
     "config": "^3.3.1",
     "cors": "^2.8.5",
@@ -61,6 +59,7 @@
     "lodash": "^4.17.20",
     "mongoose": "^5.10.0",
     "reflect-metadata": "^0.1.13",
-    "ts-node": "^9.0.0"
+    "ts-node": "^9.0.0",
+    "winston": "^3.3.3"
   }
 }

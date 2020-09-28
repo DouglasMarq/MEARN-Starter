@@ -1,11 +1,12 @@
 // import userModel from "../../model/db/userSchema";
 
-export default class userMiddleware {
-    constructor() {
-        // super();
-    }    
+import { injectable } from "inversify";
 
-    async validateUser() {
-        
-    }
+@injectable()
+export default class userMiddleware {
+  constructor() {
+    // super();
+  }
+
+  async validateUser() {}
 }
