@@ -1,8 +1,83 @@
-<div style="text-align:center" class="content">
-  <img width="400" alt="Angular Logo" src="assets/images/mean_stack_banner.png">
-  <span style="display: block"> {{ note }} </span>
-  <br>
-  <h4>For more info, visit <a href="https://github.com/DouglasMarq/MEAN-Starter">Github</a> repository</h4>
+<header>
 
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bd-navbar" style="background-color: #212121;">
+    <div class="container-fluid">
+      <a href="https://github.com/DouglasMarq/MEARN-Starter" class="d-none d-sm-block">
+      </a>
+      <a class="navbar-brand" routerLink="/">
+        <span class="mr-1">DouglasMarq</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-docs-nav"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-white" routerLink="/">
+              <i class="fas fa-home mr-1"></i>Home
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-white" routerLink="/about">
+              <i class="far fa-question-circle mr-1"></i>About
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-white" routerLink="/contact">
+              <i class="fas fa-envelope mr-1"></i>Contact
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-white" routerLink="/signin">
+              <i class="fas fa-user mr-1"></i>Sign in
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="https://github.com/DouglasMarq">
+              <i class="fab fa-github mr-1"></i>Github
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+
+<main class="">
+  <div class="container-xxl bd-layout">
+    <div class="bd-sidebar">
+      <nav class="collapse bd-links pt-4" id="bd-docs-nav">
+        <ul class="list-unstyled mb-0">
+          <li class="my-1 active d-lg-none">
+            <a class="d-inline-flex align-items-center rounded" data-toggle="collapse"
+              role="button" aria-expanded="true" aria-current="true">
+              About DouglasMarq
+            </a>
+            <ul class="list-unstyled font-weight-normal mb-2 collapse">
+              <li><a (click)="onSelectMenu('about')" class="d-inline-flex align-items-center rounded active"
+                  aria-current="page">About</a>
+              </li>
+              <li><a (click)="onSelectMenu('contact')" class="d-inline-flex align-items-center rounded">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bd-content pt-4">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>
+
+<div class="footer" style="background-color:#1976d2">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center text-white">&copy; 2020 - https://github.com/DouglasMarq/MEARN-Starter</p>
+      </div>
+    </div>
+  </div>
 </div>
-<router-outlet></router-outlet>
