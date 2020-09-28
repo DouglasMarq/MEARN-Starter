@@ -5,10 +5,11 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-  console.log('action:', action);
+  console.log('action:::::', action);
+  console.log('state:::::', state);
   switch (action.type) {
      case SIMPLE_ACTION:
-      return {...state, count: action.payload + state.count };
+      return {...state, count: action.payload + 1 };
      default:
       return state
     }
