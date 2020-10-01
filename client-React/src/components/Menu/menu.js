@@ -13,6 +13,7 @@ import {
 } from '@material-ui/core';
 import { Menu as MenuClosed, MenuOpen as MenuOpened } from '@material-ui/icons';
 import { menuAction } from '../../actions/menuState';
+import { loginAction } from '../../actions/loginState';
 
 class MenuComponent extends Component {
   constructor(props) {
@@ -33,7 +34,8 @@ class MenuComponent extends Component {
   };
 
   handleLoginButton = () => {
-    this.props.history.push('/login');
+    // this.props.history.push('/login');
+    this.props.loginAction();
   };
 
   render() {
@@ -73,10 +75,12 @@ class MenuComponent extends Component {
 }
 
 export default connect(
-  ({ menuState }) => ({
+  ({ menuState, loginState }) => ({
     menu: menuState,
+    login: loginState,
   }),
   {
     menuAction,
+    loginAction,
   }
 )(MenuComponent);

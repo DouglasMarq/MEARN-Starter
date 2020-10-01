@@ -1,9 +1,7 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { simpleAction } from "../../actions/simpleState";
-import {
-  Button
-} from "semantic-ui-react";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { simpleAction } from '../../actions/simpleState';
+import { Button } from '@material-ui/core';
 
 class Login extends Component {
   constructor(props) {
@@ -14,18 +12,20 @@ class Login extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("nextProps: ", nextProps);
+    console.log('nextProps: ', nextProps);
   }
 
   signUpPage = () => {
     this.props.simpleAction(this.state.count);
-    this.props.history.push("/signup");
+    this.props.history.push('/signup');
   };
 
   render() {
-    return <div>
-    <Button onClick={this.signUpPage}></Button>
-    </div>;
+    return (
+      <div>
+        <Button onClick={this.signUpPage}>aaaa</Button>
+      </div>
+    );
   }
 }
 

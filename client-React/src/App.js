@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { simpleAction } from "./actions/simpleState";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
-import { history } from "./store";
-import Home from "./components/Home/";
-import Login from "./components/Login/";
-import SignUp from "./components/SignUp";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { simpleAction } from './actions/simpleState';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { history } from './store';
+import Home from './components/Home/';
+import Login from './components/Login/';
+import SignUp from './components/SignUp';
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("nextProps: ", nextProps);
+    console.log('nextProps: ', nextProps);
   }
 
   render() {
