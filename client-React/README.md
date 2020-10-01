@@ -32,3 +32,4 @@ Ready-to-Code template with React 16
 - [ ] Home Page.
 - [ ] Login Page.
 - [ ] Signup Page.
+- [ ] Requests to back end server.
