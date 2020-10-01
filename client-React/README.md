@@ -22,6 +22,7 @@ Ready-to-Code template with React 16
 
 - Clone this project on your computer
 - Navigate on project folder
+- Run `npm install` on here to install dependencies.
 - Run `npm run start` on here to start React as Developer Mode.
 - You can open your browser and navigate to localhost:3000 to see if application works
 
