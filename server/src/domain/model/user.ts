@@ -1,8 +1,10 @@
-import { Schema, model } from "mongoose";
-import * as _ from "lodash";
+import { Schema, model } from 'mongoose';
+import * as _ from 'lodash';
+import joi from 'joi';
+import { injectable } from 'inversify';
 
 const userMod = model(
-  "users",
+  'users',
   new Schema({
     username: { type: String, required: true, index: true, unique: true },
     password: String,
@@ -18,31 +20,49 @@ const userMod = model(
   })
 );
 
+@injectable()
 export default class userModel {
   createUser(obj: any) {
     return userMod.create(obj);
   }
 
   findUser(obj: any) {
-    return userMod.findOne(obj);
+    return userMod.findOne(obj, {
+      username: 1,
+      email: 1,
+      _id: 0,
+    });
   }
 
-  findUsers(obj: any) {
-    return userMod.find(obj);
+  list(obj: any) {
+    return userMod.find(obj, {
+      username: 1,
+      email: 1,
+      _id: 0,
+    });
+  }
+
+  findUserById(id: string) {
+    return userMod.findById(id);
   }
 
   updateUser(obj: any) {
     return userMod.updateOne(
       {
-        username: _.get(obj, "username"),
+        username: _.get(obj, 'username'),
       },
       {
         $set: {
-          password: _.get(obj, "password"),
+          password: _.get(obj, 'password'),
         },
         safe: true,
         upsert: true,
         new: true,
+        projection: {
+          username: 1,
+          email: 1,
+          _id: 0,
+        },
       }
     );
   }
@@ -51,8 +71,8 @@ export default class userModel {
     return userMod.deleteOne(obj);
   }
 
-  deleteUserById(obj: any) {
-    return userMod.findByIdAndDelete(obj);
+  deleteUserById(id: string) {
+    return userMod.findByIdAndDelete(id);
   }
 
   deleteUsers(obj: any) {
