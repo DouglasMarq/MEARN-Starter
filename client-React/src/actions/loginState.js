@@ -10,9 +10,6 @@ export function loginAction(data) {
             'Content-Type': 'application/json',
         },
         data: {
-            "username": "IDPBBrisa",
-            "password": "1234567890",
-            "email": "douglas.marques@outlook.com"
         }
     })
         console.log(req);
