@@ -4,7 +4,7 @@ import { simpleAction } from './actions/simpleState';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { history } from './store';
 import Home from './components/Home/';
-import Login from './components/Login/';
+import Login from './components/Login/login';
 import SignUp from './components/SignUp';
 
 class App extends Component {

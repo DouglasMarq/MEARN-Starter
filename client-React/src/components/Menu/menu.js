@@ -33,9 +33,21 @@ class MenuComponent extends Component {
     console.log(this.props);
   };
 
-  handleLoginButton = () => {
-    // this.props.history.push('/login');
+  handleHomeButton = () => {
+    // this.props.history.push('/');
     this.props.loginAction();
+  };
+  handleLoginButton = () => {
+    this.props.history.push('/login');
+    // this.props.loginAction();
+  };
+  handleContactButton = () => {
+    this.props.history.push('/contact');
+    // this.props.loginAction();
+  };
+  handleAboutButton = () => {
+    this.props.history.push('/about');
+    // this.props.loginAction();
   };
 
   render() {
@@ -67,7 +79,10 @@ class MenuComponent extends Component {
           onClose={this.handleClick}
           className={classes['menu']}
         >
+          <MenuItem onClick={this.handleHomeButton}>Home</MenuItem>
           <MenuItem onClick={this.handleLoginButton}>Login</MenuItem>
+          <MenuItem onClick={this.handleContactButton}>Contact</MenuItem>
+          <MenuItem onClick={this.handleAboutButton}>About</MenuItem>
         </Menu>
       </div>
     );

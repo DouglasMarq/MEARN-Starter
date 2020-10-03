@@ -1,10 +1,21 @@
 import { LOGIN_ACTION, LOGOUT_ACTION } from '../contants/actionTypes';
-import get from 'axios';
+import request from 'axios';
 
 export function loginAction(data) {
   return async (dispatch) => {
     try {
-      console.log('login: ', await get('http://localhost:3000/api/users/read'));
+        console.log("realizando req:::");
+        let req = await request.post('http://localhost:3001/api/users/read', {
+            headers: {
+            'Content-Type': 'application/json',
+        },
+        data: {
+            "username": "IDPBBrisa",
+            "password": "1234567890",
+            "email": "douglas.marques@outlook.com"
+        }
+    })
+        console.log(req);
     } catch (err) {
       console.log(err);
     }

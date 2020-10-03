@@ -1,0 +1,12 @@
+.menuButton {
+    margin-right: 2rem;
+  }
+
+  .title {
+    flex-grow: 2;
+  }
+
+  .menu {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+  }
