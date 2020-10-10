@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { simpleAction } from './actions/simpleState';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { history } from './store';
-import Home from './components/Home/';
-import Login from './components/Login/login';
-import SignUp from './components/SignUp';
+import Home from './components/presentational/Home';
+import Login from './components/presentational/Login';
+import SignUp from './components/presentational/SignUp';
 
 class App extends Component {
   constructor(props) {

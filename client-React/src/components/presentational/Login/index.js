@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { simpleAction } from '../../actions/simpleState';
+import { simpleAction } from '../../../actions/simpleState';
 import { Button, Card, CardContent, Typography, CardActions } from '@material-ui/core';
-import classes from './login.module.css';
+import classes from './index.module.css';
+import MenuComponent from '../../component/Menu';
 
 class Login extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class Login extends Component {
   render() {
     return (
       <div>
+          <MenuComponent history={this.props.history}/>
         <Button onClick={this.signUpPage}>aaaa</Button>
 
     <Card className={classes.root}>

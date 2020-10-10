@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { simpleAction } from '../../actions/simpleState';
-import MenuComponent from '../Menu/menu';
+import { simpleAction } from '../../../actions/simpleState';
+import MenuComponent from '../../component/Menu';
 
 class Home extends Component {
   constructor(props) {

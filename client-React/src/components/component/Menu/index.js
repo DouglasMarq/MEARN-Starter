@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import classes from './menu.module.css';
+import classes from './index.module.css';
 import {
   Button,
   Menu,
@@ -12,8 +12,8 @@ import {
   IconButton,
 } from '@material-ui/core';
 import { Menu as MenuClosed, MenuOpen as MenuOpened } from '@material-ui/icons';
-import { menuAction } from '../../actions/menuState';
-import { loginAction } from '../../actions/loginState';
+import { menuAction } from '../../../actions/menuState';
+import { loginAction } from '../../../actions/loginState';
 
 class MenuComponent extends Component {
   constructor(props) {
