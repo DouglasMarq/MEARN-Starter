@@ -8,7 +8,6 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Icon,
   IconButton,
 } from '@material-ui/core';
 import { Menu as MenuClosed, MenuOpen as MenuOpened } from '@material-ui/icons';

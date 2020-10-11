@@ -26,7 +26,7 @@ class Login extends Component {
     return (
       <div>
           <MenuComponent history={this.props.history}/>
-        <Button onClick={this.signUpPage}>aaaa</Button>
+     {/*<Button onClick={this.signUpPage}>aaaa</Button>*/}
 
     <Card className={classes.root}>
       <CardContent>

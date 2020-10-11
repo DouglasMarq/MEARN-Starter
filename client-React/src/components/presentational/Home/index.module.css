@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 11vh;
+}
+
+.backgroundImage {
+    background-size: cover;
+    object-fit: cover;
+}

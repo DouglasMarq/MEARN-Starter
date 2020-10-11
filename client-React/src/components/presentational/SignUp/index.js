@@ -23,7 +23,7 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <Button onClick={this.loginPage}>aaaa</Button>
+        {/*<Button onClick={this.loginPage}>aaaa</Button>*/}
       </div>
     );
   }
