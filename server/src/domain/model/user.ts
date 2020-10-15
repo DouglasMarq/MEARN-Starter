@@ -1,13 +1,12 @@
 import { Schema, model } from 'mongoose';
 import * as _ from 'lodash';
-import joi from 'joi';
 import { injectable } from 'inversify';
 
 const userMod = model(
   'users',
   new Schema({
     username: { type: String, required: true, index: true, unique: true },
-    password: String,
+    password: { type: String, required: true },
     createdAt: {
       type: Date,
       default: new Date(),

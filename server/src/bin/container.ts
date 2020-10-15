@@ -5,12 +5,16 @@ import Router from '../api';
 import Mongo from './database';
 import { Logger } from 'winston';
 import Controller from '../api/controller';
-import UserService from '../domain/service/user';
 import Routers from '../api/router';
+import BaseModel from '../domain/model';
+import UserService from '../domain/service/user';
 import UserController from '../api/controller/user';
 import UserRouter from '../api/router/user';
 import UserModel from '../domain/model/user';
-import BaseModel from '../domain/model';
+import PostumeService from '../domain/service/postume';
+import PostumeController from '../api/controller/postume';
+import PostumeRouter from '../api/router/postume';
+import PostumeModel from '../domain/model/postume';
 
 let container = new Container();
 
@@ -26,26 +30,11 @@ export default function bindContainers() {
   container.bind<UserController>(UserController).to(UserController).inSingletonScope();
   container.bind<UserRouter>(UserRouter).to(UserRouter).inSingletonScope();
   container.bind<UserModel>(UserModel).to(UserModel).inSingletonScope();
+  container.bind<PostumeService>(PostumeService).to(PostumeService).inSingletonScope();
+  container.bind<PostumeController>(PostumeController).to(PostumeController).inSingletonScope();
+  container.bind<PostumeRouter>(PostumeRouter).to(PostumeRouter).inSingletonScope();
+  container.bind<PostumeModel>(PostumeModel).to(PostumeModel).inSingletonScope();
   container.bind<BaseModel>(BaseModel).to(BaseModel).inSingletonScope();
 
   return container;
-  // container.bind<Logger>("logger").toConstantValue(logger);
 }
-
-// export class bindContainers {
-//   loadContainers() {
-
-//     // let logger = newLogger(config.get("logger.file"));
-
-//     container.bind<Server>(Server).to(Server).inSingletonScope();
-//     container.bind<Router>(Router).to(Router).inSingletonScope();
-//     container.bind<Mongo>(Mongo).to(Mongo).inSingletonScope();
-//     // container.bind<Logger>("logger").toConstantValue(logger);
-//   }
-
-//   getContainer() {
-//     return container;
-//   }
-// }
-
-// export default new bindContainers();
