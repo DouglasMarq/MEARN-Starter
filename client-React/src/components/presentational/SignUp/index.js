@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { simpleAction } from '../../actions/simpleState';
-import MenuComponent from '../Menu/menu';
+import { simpleAction } from '../../../actions/simpleState';
+import { Button } from '@material-ui/core';
 
-class Home extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 1,
+      count: this.props.simple.count || 1,
     };
   }
 
@@ -16,14 +16,14 @@ class Home extends Component {
   }
 
   loginPage = () => {
-    // this.props.simpleAction(this.state.count);
+    this.props.simpleAction(this.state.count);
     this.props.history.push('/login');
   };
 
   render() {
     return (
       <div>
-        <MenuComponent history={this.props.history} />
+        {/*<Button onClick={this.loginPage}>aaaa</Button>*/}
       </div>
     );
   }
@@ -36,4 +36,4 @@ export default connect(
   {
     simpleAction,
   }
-)(Home);
+)(Login);

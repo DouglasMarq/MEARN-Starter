@@ -1,4 +1,4 @@
-import { MENU_ACTION, MENU_CONTROLLER } from '../contants/actionTypes';
+import { MENU_CONTROLLER } from '../contants/actionTypes';
 
 export function menuAction(data) {
   return (dispatch) => {
