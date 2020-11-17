@@ -1,5 +1,21 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+### yarn ###
+# https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
+yarn.lock
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# if you are NOT using Zero-installs, then:
+# comment the following lines
+!.yarn/cache
+
+# and uncomment the following lines
+# .pnp.*
+
 # compiled output
 /dist
 /tmp
