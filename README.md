@@ -1,9 +1,9 @@
 # MEARN-Starter
-Ready-to-Code template with Angular 10 OR React 16
+Ready-to-Code template with Angular 11 OR React 17
 
 ## Folder structure
 
-### Angular 10
+### Angular 11
 + **client-angular/src**: *Angular app created using ```angular/cli```.*
 + **client-angular/index.js**: *File that is used to start the node server*
 
@@ -37,12 +37,12 @@ Ready-to-Code template with Angular 10 OR React 16
 ### React
 + Clone this project on your computer
 + Navigate on project folder
-+ Run ```npm run start``` on here to start React as Developer Mode.
++ Run ```yarn start``` on here to start React as Developer Mode.
 + You can open your browser and navigate to localhost:3000 to see if application works
 
 ### Typescript
 + Clone this project on your computer
 + Be sure you have started MongoDB service before running the application
 + Navigate on project folder
-+ Run ```npm run start``` on here to Transpile TS to JS and start the server.
++ Run ```yarn start``` on here to Transpile TS to JS and start the server.
 + You can open now send a Post request to http://localhost:3000/api/createRoute with username, password and email.
